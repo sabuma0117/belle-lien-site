@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Belle Lien - 髪質改善・美髪育成</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
@@ -47,13 +47,13 @@
       height: 120%;
       background: radial-gradient(circle at center, rgba(201,162,126,.25) 0%, transparent 70%);
       transform: translateX(-50%);
-      z-index: 0; /* ← 追加 */
+      z-index: 0;
     }
     header img,
     header p,
     .btn-wrapper {
-      position: relative; /* ← 追加 */
-      z-index: 1;         /* ← 追加 */
+      position: relative;
+      z-index: 1;
     }
     header img {
       width: min(340px, 80vw);
@@ -214,16 +214,29 @@
       transition: color .3s;
     }
     footer .sns a:hover { color: var(--accent); }
-    @media (max-width: 768px) {
+
+    /* モバイル向けレスポンシブ改善 */
+    @media (max-width: 480px) {
       header { padding: 80px 15px 60px; }
       h2 { font-size: 1.5rem; }
+      header p { font-size: 1rem; }
+      .btn { font-size: 1rem; padding: 12px 20px; }
+      .menu li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .menu li span {
+        font-size: 1rem;
+      }
       .info-grid { grid-template-columns: 1fr; }
+      .gallery-wrapper { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="img/belle-lien-logo.png" alt="Belle Lien ロゴ">
+    <img src="img/belle-lien-logo.png" alt="Belle Lien ロゴ" />
     <p>髪と心に、やさしいゆらぎを。</p>
     <div class="btn-wrapper">
       <a class="btn" href="https://beauty.hotpepper.jp/slnH000755957/coupon/" target="_blank" rel="noopener noreferrer">
